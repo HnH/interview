@@ -60,7 +60,7 @@ func (suite *FilesystemSuite) SetupSuite() {
 							},
 						},
 						file{
-							name: "/first/inner/linking-park-nothing-else-matters.mp3",
+							name: "/first/inner/linkin-park-nothing-else-matters.mp3",
 							size: 1024 * 1024 * 7,
 						},
 					},
@@ -127,12 +127,12 @@ func (suite *FilesystemSuite) SetupSuite() {
 
 func (suite *FilesystemSuite) TestFilter() {
 	var (
-		output   = filter(suite.fs)
+		output   = filter(suite.fs...)
 		expected = []string{
 			"/first/inner/directory/sub/aerosmith-dream-on.mp3",
 			"/first/inner/music/metallica-nothing-else-matters.mp3",
 			"/first/inner/music/metallica-unforgiven.mp3",
-			"/first/inner/linking-park-nothing-else-matters.mp3",
+			"/first/inner/linkin-park-nothing-else-matters.mp3",
 			"/downloads/lecture.mp3",
 			"/the-cranberries-zombie.mp3",
 		}

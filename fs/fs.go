@@ -14,6 +14,6 @@ type Inode interface {
 	GetChildren() []Inode
 }
 
-func filter(in []Inode) []string {
+func filter(in ...Inode) []string {
 	return []string{}
 }
